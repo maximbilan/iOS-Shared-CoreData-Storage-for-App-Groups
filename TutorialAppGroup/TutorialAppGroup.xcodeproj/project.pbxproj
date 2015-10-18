@@ -86,6 +86,10 @@
 		947318F11BD3E5F2007189D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		947318F31BD3E5F2007189D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		947318F51BD3E5F2007189D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		947318FF1BD3E9E5007189D7 /* TutorialAppGroup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TutorialAppGroup.entitlements; sourceTree = "<group>"; };
+		947319001BD3EA08007189D7 /* TutorialAppGroup Today Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TutorialAppGroup Today Extension.entitlements"; sourceTree = "<group>"; };
+		947319011BD3EA14007189D7 /* TutorialAppGroup WatchKit 1 Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TutorialAppGroup WatchKit 1 Extension.entitlements"; sourceTree = "<group>"; };
+		947319021BD3EA22007189D7 /* TutorialAppGroup WatchKit 1 App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TutorialAppGroup WatchKit 1 App.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,7 @@
 		947318B21BD3E4A5007189D7 /* TutorialAppGroup */ = {
 			isa = PBXGroup;
 			children = (
+				947318FF1BD3E9E5007189D7 /* TutorialAppGroup.entitlements */,
 				947318B31BD3E4A5007189D7 /* AppDelegate.swift */,
 				947318B51BD3E4A5007189D7 /* ViewController.swift */,
 				947318B71BD3E4A5007189D7 /* Main.storyboard */,
@@ -162,6 +167,7 @@
 		947318D01BD3E583007189D7 /* TutorialAppGroup Today Extension */ = {
 			isa = PBXGroup;
 			children = (
+				947319001BD3EA08007189D7 /* TutorialAppGroup Today Extension.entitlements */,
 				947318D11BD3E583007189D7 /* TodayViewController.swift */,
 				947318D31BD3E583007189D7 /* MainInterface.storyboard */,
 				947318D61BD3E583007189D7 /* Info.plist */,
@@ -172,6 +178,7 @@
 		947318E31BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension */ = {
 			isa = PBXGroup;
 			children = (
+				947319011BD3EA14007189D7 /* TutorialAppGroup WatchKit 1 Extension.entitlements */,
 				947318E41BD3E5F2007189D7 /* InterfaceController.swift */,
 				947318E61BD3E5F2007189D7 /* Assets.xcassets */,
 				947318E81BD3E5F2007189D7 /* Info.plist */,
@@ -182,6 +189,7 @@
 		947318EF1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App */ = {
 			isa = PBXGroup;
 			children = (
+				947319021BD3EA22007189D7 /* TutorialAppGroup WatchKit 1 App.entitlements */,
 				947318F01BD3E5F2007189D7 /* Interface.storyboard */,
 				947318F31BD3E5F2007189D7 /* Assets.xcassets */,
 				947318F51BD3E5F2007189D7 /* Info.plist */,
@@ -273,15 +281,39 @@
 				TargetAttributes = {
 					947318AF1BD3E4A5007189D7 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 828XSMPA74;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					947318CB1BD3E583007189D7 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 828XSMPA74;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					947318E11BD3E5F2007189D7 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 828XSMPA74;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					947318EA1BD3E5F2007189D7 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 828XSMPA74;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -515,11 +547,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TutorialAppGroup/TutorialAppGroup.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TutorialAppGroup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.TutorialAppGroup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -527,21 +563,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TutorialAppGroup/TutorialAppGroup.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TutorialAppGroup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.TutorialAppGroup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 		947318DB1BD3E583007189D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TutorialAppGroup Today Extension/TutorialAppGroup Today Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/TutorialAppGroup Today Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.maximbilan.tutorialappgroup.Tutorial-App-Group-Today-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -549,10 +593,14 @@
 		947318DC1BD3E583007189D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TutorialAppGroup Today Extension/TutorialAppGroup Today Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/TutorialAppGroup Today Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.maximbilan.tutorialappgroup.Tutorial-App-Group-Today-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -561,11 +609,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "TutorialAppGroup WatchKit 1 App/TutorialAppGroup WatchKit 1 App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IBSC_MODULE = TutorialAppGroup_WatchKit_1_Extension;
 				INFOPLIST_FILE = "TutorialAppGroup WatchKit 1 App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -576,11 +628,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "TutorialAppGroup WatchKit 1 App/TutorialAppGroup WatchKit 1 App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IBSC_MODULE = TutorialAppGroup_WatchKit_1_Extension;
 				INFOPLIST_FILE = "TutorialAppGroup WatchKit 1 App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -590,10 +646,14 @@
 		947318FD1BD3E5F2007189D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TutorialAppGroup WatchKit 1 Extension/TutorialAppGroup WatchKit 1 Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "TutorialAppGroup WatchKit 1 Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -601,10 +661,14 @@
 		947318FE1BD3E5F2007189D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TutorialAppGroup WatchKit 1 Extension/TutorialAppGroup WatchKit 1 Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "TutorialAppGroup WatchKit 1 Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
