@@ -16,7 +16,7 @@
 		947318CF1BD3E583007189D7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 947318CE1BD3E583007189D7 /* NotificationCenter.framework */; settings = {ASSET_TAGS = (); }; };
 		947318D21BD3E583007189D7 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947318D11BD3E583007189D7 /* TodayViewController.swift */; };
 		947318D51BD3E583007189D7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947318D31BD3E583007189D7 /* MainInterface.storyboard */; };
-		947318D91BD3E583007189D7 /* Tutorial App Group Today Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 947318CC1BD3E583007189D7 /* Tutorial App Group Today Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		947318D91BD3E583007189D7 /* TutorialAppGroup Today Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 947318CC1BD3E583007189D7 /* TutorialAppGroup Today Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		947318E51BD3E5F2007189D7 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947318E41BD3E5F2007189D7 /* InterfaceController.swift */; };
 		947318E71BD3E5F2007189D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947318E61BD3E5F2007189D7 /* Assets.xcassets */; };
 		947318EC1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App.app in Resources */ = {isa = PBXBuildFile; fileRef = 947318EB1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App.app */; };
@@ -57,7 +57,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				947318F81BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension.appex in Embed App Extensions */,
-				947318D91BD3E583007189D7 /* Tutorial App Group Today Extension.appex in Embed App Extensions */,
+				947318D91BD3E583007189D7 /* TutorialAppGroup Today Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,7 +73,7 @@
 		947318BD1BD3E4A5007189D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		947318C01BD3E4A5007189D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		947318C21BD3E4A5007189D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		947318CC1BD3E583007189D7 /* Tutorial App Group Today Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tutorial App Group Today Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		947318CC1BD3E583007189D7 /* TutorialAppGroup Today Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TutorialAppGroup Today Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		947318CE1BD3E583007189D7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		947318D11BD3E583007189D7 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		947318D41BD3E583007189D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				947318B21BD3E4A5007189D7 /* TutorialAppGroup */,
-				947318D01BD3E583007189D7 /* Tutorial App Group Today Extension */,
+				947318D01BD3E583007189D7 /* TutorialAppGroup Today Extension */,
 				947318E31BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension */,
 				947318EF1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App */,
 				947318CD1BD3E583007189D7 /* Frameworks */,
@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				947318B01BD3E4A5007189D7 /* TutorialAppGroup.app */,
-				947318CC1BD3E583007189D7 /* Tutorial App Group Today Extension.appex */,
+				947318CC1BD3E583007189D7 /* TutorialAppGroup Today Extension.appex */,
 				947318E21BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension.appex */,
 				947318EB1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App.app */,
 			);
@@ -159,14 +159,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		947318D01BD3E583007189D7 /* Tutorial App Group Today Extension */ = {
+		947318D01BD3E583007189D7 /* TutorialAppGroup Today Extension */ = {
 			isa = PBXGroup;
 			children = (
 				947318D11BD3E583007189D7 /* TodayViewController.swift */,
 				947318D31BD3E583007189D7 /* MainInterface.storyboard */,
 				947318D61BD3E583007189D7 /* Info.plist */,
 			);
-			path = "Tutorial App Group Today Extension";
+			path = "TutorialAppGroup Today Extension";
 			sourceTree = "<group>";
 		};
 		947318E31BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension */ = {
@@ -212,9 +212,9 @@
 			productReference = 947318B01BD3E4A5007189D7 /* TutorialAppGroup.app */;
 			productType = "com.apple.product-type.application";
 		};
-		947318CB1BD3E583007189D7 /* Tutorial App Group Today Extension */ = {
+		947318CB1BD3E583007189D7 /* TutorialAppGroup Today Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 947318DA1BD3E583007189D7 /* Build configuration list for PBXNativeTarget "Tutorial App Group Today Extension" */;
+			buildConfigurationList = 947318DA1BD3E583007189D7 /* Build configuration list for PBXNativeTarget "TutorialAppGroup Today Extension" */;
 			buildPhases = (
 				947318C81BD3E583007189D7 /* Sources */,
 				947318C91BD3E583007189D7 /* Frameworks */,
@@ -224,9 +224,9 @@
 			);
 			dependencies = (
 			);
-			name = "Tutorial App Group Today Extension";
+			name = "TutorialAppGroup Today Extension";
 			productName = "Tutorial App Group Today Extension";
-			productReference = 947318CC1BD3E583007189D7 /* Tutorial App Group Today Extension.appex */;
+			productReference = 947318CC1BD3E583007189D7 /* TutorialAppGroup Today Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		947318E11BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension */ = {
@@ -299,7 +299,7 @@
 			projectRoot = "";
 			targets = (
 				947318AF1BD3E4A5007189D7 /* TutorialAppGroup */,
-				947318CB1BD3E583007189D7 /* Tutorial App Group Today Extension */,
+				947318CB1BD3E583007189D7 /* TutorialAppGroup Today Extension */,
 				947318E11BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension */,
 				947318EA1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App */,
 			);
@@ -377,7 +377,7 @@
 /* Begin PBXTargetDependency section */
 		947318D81BD3E583007189D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 947318CB1BD3E583007189D7 /* Tutorial App Group Today Extension */;
+			target = 947318CB1BD3E583007189D7 /* TutorialAppGroup Today Extension */;
 			targetProxy = 947318D71BD3E583007189D7 /* PBXContainerItemProxy */;
 		};
 		947318EE1BD3E5F2007189D7 /* PBXTargetDependency */ = {
@@ -538,7 +538,7 @@
 		947318DB1BD3E583007189D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "Tutorial App Group Today Extension/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TutorialAppGroup Today Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.maximbilan.tutorialappgroup.Tutorial-App-Group-Today-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -549,7 +549,7 @@
 		947318DC1BD3E583007189D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "Tutorial App Group Today Extension/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TutorialAppGroup Today Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.maximbilan.tutorialappgroup.Tutorial-App-Group-Today-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -628,14 +628,16 @@
 				947318C71BD3E4A5007189D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		947318DA1BD3E583007189D7 /* Build configuration list for PBXNativeTarget "Tutorial App Group Today Extension" */ = {
+		947318DA1BD3E583007189D7 /* Build configuration list for PBXNativeTarget "TutorialAppGroup Today Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				947318DB1BD3E583007189D7 /* Debug */,
 				947318DC1BD3E583007189D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		947318F91BD3E5F2007189D7 /* Build configuration list for PBXNativeTarget "TutorialAppGroup WatchKit 1 App" */ = {
 			isa = XCConfigurationList;
@@ -644,6 +646,7 @@
 				947318FB1BD3E5F2007189D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		947318FC1BD3E5F2007189D7 /* Build configuration list for PBXNativeTarget "TutorialAppGroup WatchKit 1 Extension" */ = {
 			isa = XCConfigurationList;
@@ -652,6 +655,7 @@
 				947318FE1BD3E5F2007189D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
