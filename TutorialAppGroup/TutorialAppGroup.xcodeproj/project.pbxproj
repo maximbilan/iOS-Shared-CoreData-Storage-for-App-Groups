@@ -23,6 +23,11 @@
 		947318F21BD3E5F2007189D7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947318F01BD3E5F2007189D7 /* Interface.storyboard */; };
 		947318F41BD3E5F2007189D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947318F31BD3E5F2007189D7 /* Assets.xcassets */; };
 		947318F81BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 947318E21BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		947319031BD3F295007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 947318BA1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		947319041BD3F296007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 947318BA1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		947319071BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947319061BD3F2E4007189D7 /* CoreDataStorage.swift */; settings = {ASSET_TAGS = (); }; };
+		947319081BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947319061BD3F2E4007189D7 /* CoreDataStorage.swift */; settings = {ASSET_TAGS = (); }; };
+		947319091BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947319061BD3F2E4007189D7 /* CoreDataStorage.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +95,7 @@
 		947319001BD3EA08007189D7 /* TutorialAppGroup Today Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TutorialAppGroup Today Extension.entitlements"; sourceTree = "<group>"; };
 		947319011BD3EA14007189D7 /* TutorialAppGroup WatchKit 1 Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TutorialAppGroup WatchKit 1 Extension.entitlements"; sourceTree = "<group>"; };
 		947319021BD3EA22007189D7 /* TutorialAppGroup WatchKit 1 App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TutorialAppGroup WatchKit 1 App.entitlements"; sourceTree = "<group>"; };
+		947319061BD3F2E4007189D7 /* CoreDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		947318A71BD3E4A5007189D7 = {
 			isa = PBXGroup;
 			children = (
+				947319051BD3F2CE007189D7 /* Shared */,
 				947318B21BD3E4A5007189D7 /* TutorialAppGroup */,
 				947318D01BD3E583007189D7 /* TutorialAppGroup Today Extension */,
 				947318E31BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension */,
@@ -195,6 +202,14 @@
 				947318F51BD3E5F2007189D7 /* Info.plist */,
 			);
 			path = "TutorialAppGroup WatchKit 1 App";
+			sourceTree = "<group>";
+		};
+		947319051BD3F2CE007189D7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				947319061BD3F2E4007189D7 /* CoreDataStorage.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947319071BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */,
 				947318B61BD3E4A5007189D7 /* ViewController.swift in Sources */,
 				947318BC1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */,
 				947318B41BD3E4A5007189D7 /* AppDelegate.swift in Sources */,
@@ -392,7 +408,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947319081BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */,
 				947318D21BD3E583007189D7 /* TodayViewController.swift in Sources */,
+				947319031BD3F295007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +418,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947319091BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */,
 				947318E51BD3E5F2007189D7 /* InterfaceController.swift in Sources */,
+				947319041BD3F296007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
