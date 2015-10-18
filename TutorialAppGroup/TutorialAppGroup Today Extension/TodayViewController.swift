@@ -10,7 +10,11 @@ import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+	
+	@IBOutlet weak var titleLabel: UILabel!
+	@IBOutlet weak var valueLabel: UILabel!
+	@IBOutlet weak var incrementButton: UIButton!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
@@ -30,5 +34,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
         completionHandler(NCUpdateResult.NewData)
     }
-    
+	
+	@IBAction func incrementButtonAction(sender: UIButton) {
+	}
+	
 }

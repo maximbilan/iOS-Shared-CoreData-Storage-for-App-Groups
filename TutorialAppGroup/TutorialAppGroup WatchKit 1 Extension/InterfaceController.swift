@@ -12,6 +12,10 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+	@IBOutlet var titleLabel: WKInterfaceLabel!
+	@IBOutlet var valueLabel: WKInterfaceLabel!
+	@IBOutlet var incrementButton: WKInterfaceButton!
+	
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -28,4 +32,7 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+	@IBAction func incrementButtonAction() {
+	}
+	
 }
