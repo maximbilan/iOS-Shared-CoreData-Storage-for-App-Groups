@@ -13,7 +13,35 @@
 		947318BC1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 947318BA1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld */; };
 		947318BE1BD3E4A5007189D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947318BD1BD3E4A5007189D7 /* Assets.xcassets */; };
 		947318C11BD3E4A5007189D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947318BF1BD3E4A5007189D7 /* LaunchScreen.storyboard */; };
+		947318CF1BD3E583007189D7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 947318CE1BD3E583007189D7 /* NotificationCenter.framework */; settings = {ASSET_TAGS = (); }; };
+		947318D21BD3E583007189D7 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947318D11BD3E583007189D7 /* TodayViewController.swift */; };
+		947318D51BD3E583007189D7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947318D31BD3E583007189D7 /* MainInterface.storyboard */; };
+		947318D91BD3E583007189D7 /* Tutorial App Group Today Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 947318CC1BD3E583007189D7 /* Tutorial App Group Today Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		947318D71BD3E583007189D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947318A81BD3E4A5007189D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 947318CB1BD3E583007189D7;
+			remoteInfo = "Tutorial App Group Today Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		947318DD1BD3E583007189D7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				947318D91BD3E583007189D7 /* Tutorial App Group Today Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		947318B01BD3E4A5007189D7 /* TutorialAppGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorialAppGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +52,11 @@
 		947318BD1BD3E4A5007189D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		947318C01BD3E4A5007189D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		947318C21BD3E4A5007189D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		947318CC1BD3E583007189D7 /* Tutorial App Group Today Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tutorial App Group Today Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		947318CE1BD3E583007189D7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		947318D11BD3E583007189D7 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		947318D41BD3E583007189D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		947318D61BD3E583007189D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +67,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		947318C91BD3E583007189D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				947318CF1BD3E583007189D7 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				947318B21BD3E4A5007189D7 /* TutorialAppGroup */,
+				947318D01BD3E583007189D7 /* Tutorial App Group Today Extension */,
+				947318CD1BD3E583007189D7 /* Frameworks */,
 				947318B11BD3E4A5007189D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				947318B01BD3E4A5007189D7 /* TutorialAppGroup.app */,
+				947318CC1BD3E583007189D7 /* Tutorial App Group Today Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +111,24 @@
 			path = TutorialAppGroup;
 			sourceTree = "<group>";
 		};
+		947318CD1BD3E583007189D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				947318CE1BD3E583007189D7 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		947318D01BD3E583007189D7 /* Tutorial App Group Today Extension */ = {
+			isa = PBXGroup;
+			children = (
+				947318D11BD3E583007189D7 /* TodayViewController.swift */,
+				947318D31BD3E583007189D7 /* MainInterface.storyboard */,
+				947318D61BD3E583007189D7 /* Info.plist */,
+			);
+			path = "Tutorial App Group Today Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +139,34 @@
 				947318AC1BD3E4A5007189D7 /* Sources */,
 				947318AD1BD3E4A5007189D7 /* Frameworks */,
 				947318AE1BD3E4A5007189D7 /* Resources */,
+				947318DD1BD3E583007189D7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				947318D81BD3E583007189D7 /* PBXTargetDependency */,
 			);
 			name = TutorialAppGroup;
 			productName = TutorialAppGroup;
 			productReference = 947318B01BD3E4A5007189D7 /* TutorialAppGroup.app */;
 			productType = "com.apple.product-type.application";
+		};
+		947318CB1BD3E583007189D7 /* Tutorial App Group Today Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 947318DA1BD3E583007189D7 /* Build configuration list for PBXNativeTarget "Tutorial App Group Today Extension" */;
+			buildPhases = (
+				947318C81BD3E583007189D7 /* Sources */,
+				947318C91BD3E583007189D7 /* Frameworks */,
+				947318CA1BD3E583007189D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tutorial App Group Today Extension";
+			productName = "Tutorial App Group Today Extension";
+			productReference = 947318CC1BD3E583007189D7 /* Tutorial App Group Today Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -97,6 +178,9 @@
 				ORGANIZATIONNAME = Maxim;
 				TargetAttributes = {
 					947318AF1BD3E4A5007189D7 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					947318CB1BD3E583007189D7 = {
 						CreatedOnToolsVersion = 7.0.1;
 					};
 				};
@@ -115,6 +199,7 @@
 			projectRoot = "";
 			targets = (
 				947318AF1BD3E4A5007189D7 /* TutorialAppGroup */,
+				947318CB1BD3E583007189D7 /* Tutorial App Group Today Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +212,14 @@
 				947318C11BD3E4A5007189D7 /* LaunchScreen.storyboard in Resources */,
 				947318BE1BD3E4A5007189D7 /* Assets.xcassets in Resources */,
 				947318B91BD3E4A5007189D7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		947318CA1BD3E583007189D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				947318D51BD3E583007189D7 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +236,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		947318C81BD3E583007189D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				947318D21BD3E583007189D7 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		947318D81BD3E583007189D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 947318CB1BD3E583007189D7 /* Tutorial App Group Today Extension */;
+			targetProxy = 947318D71BD3E583007189D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		947318B71BD3E4A5007189D7 /* Main.storyboard */ = {
@@ -160,6 +269,14 @@
 				947318C01BD3E4A5007189D7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		947318D31BD3E583007189D7 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				947318D41BD3E583007189D7 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -252,6 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TutorialAppGroup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.TutorialAppGroup;
@@ -263,10 +381,33 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TutorialAppGroup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.TutorialAppGroup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		947318DB1BD3E583007189D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Tutorial App Group Today Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maximbilan.tutorialappgroup.Tutorial-App-Group-Today-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		947318DC1BD3E583007189D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Tutorial App Group Today Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maximbilan.tutorialappgroup.Tutorial-App-Group-Today-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -287,6 +428,14 @@
 			buildConfigurations = (
 				947318C61BD3E4A5007189D7 /* Debug */,
 				947318C71BD3E4A5007189D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		947318DA1BD3E583007189D7 /* Build configuration list for PBXNativeTarget "Tutorial App Group Today Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				947318DB1BD3E583007189D7 /* Debug */,
+				947318DC1BD3E583007189D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
