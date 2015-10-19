@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationCenter
+import CoreData
 
 class TodayViewController: UIViewController, NCWidgetProviding {
 	
@@ -15,14 +16,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	@IBOutlet weak var valueLabel: UILabel!
 	@IBOutlet weak var incrementButton: UIButton!
 	
+	let context = CoreDataStorage.mainQueueContext()
+	var counter: Counter?
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+		
+		self.preferredContentSize.height = 50
+		
+		fetchData()
     }
     
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
@@ -32,10 +34,51 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
 
+		fetchData()
         completionHandler(NCUpdateResult.NewData)
     }
 	
+	// MARK: - Logic
+	
+	func fetchData() {
+		self.context.performBlockAndWait{ () -> Void in
+			
+			let counter = NSManagedObject.findAllForEntity("Counter", context: self.context)
+			
+			if (counter?.last != nil) {
+				self.counter = (counter?.last as! Counter)
+			}
+			else {
+				self.counter = (NSEntityDescription.insertNewObjectForEntityForName("Counter", inManagedObjectContext: self.context) as! Counter)
+				self.counter?.title = "Counter"
+				self.counter?.value = 0
+			}
+			
+			self.updateUI()
+		}
+	}
+	
+	func updateUI() {
+		titleLabel.text = counter?.title
+		valueLabel.text = counter?.value?.stringValue
+	}
+	
+	func save() {
+		if let value = Int(self.valueLabel.text!) {
+			self.counter?.value = value
+			CoreDataStorage.saveContext(self.context)
+		}
+	}
+	
+	// MARK: - Actions
+	
 	@IBAction func incrementButtonAction(sender: UIButton) {
+		if let value = Int(self.valueLabel.text!) {
+			counter?.value = value + 1
+		}
+		
+		updateUI()
+		save()
 	}
 	
 }
