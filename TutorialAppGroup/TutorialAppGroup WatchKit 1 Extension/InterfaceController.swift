@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import CoreData
 
 class InterfaceController: WKInterfaceController {
 
@@ -16,10 +16,13 @@ class InterfaceController: WKInterfaceController {
 	@IBOutlet var valueLabel: WKInterfaceLabel!
 	@IBOutlet var incrementButton: WKInterfaceButton!
 	
+	let context = CoreDataStorage.mainQueueContext()
+	var counter: Counter?
+	
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        // Configure interface objects here.
+		
+		fetchData()
     }
 
     override func willActivate() {
@@ -32,7 +35,43 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+	// MARK: - Logic
+	
+	func fetchData() {
+		self.context.performBlockAndWait{ () -> Void in
+			
+			let counter = NSManagedObject.findAllForEntity("Counter", context: self.context)
+			
+			if (counter?.last != nil) {
+				self.counter = (counter?.last as! Counter)
+			}
+			else {
+				self.counter = (NSEntityDescription.insertNewObjectForEntityForName("Counter", inManagedObjectContext: self.context) as! Counter)
+				self.counter?.title = "Counter"
+				self.counter?.value = 0
+			}
+			
+			self.updateUI()
+		}
+	}
+	
+	func updateUI() {
+		titleLabel.setText(counter?.title)
+		valueLabel.setText(counter?.value?.stringValue)
+	}
+	
+	func save() {
+		CoreDataStorage.saveContext(self.context)
+	}
+	
+	// MARK: - Actions
+	
 	@IBAction func incrementButtonAction() {
+		let value = counter?.value?.integerValue
+		counter?.value = value! + 1
+		
+		updateUI()
+		save()
 	}
 	
 }
