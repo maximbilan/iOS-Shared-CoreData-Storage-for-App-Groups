@@ -34,6 +34,9 @@
                                 <rect key="frame" x="285" y="291" width="30" height="30"/>
                                 <animations/>
                                 <state key="normal" title="+ 1"/>
+                                <connections>
+                                    <action selector="incrementButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMG-AZ-PZ5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -47,6 +50,11 @@
                             <constraint firstItem="3Qy-0A-7Dg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="6" id="Z6B-M1-0vZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="incrementButton" destination="3Qy-0A-7Dg" id="IyF-LG-QEh"/>
+                        <outlet property="titleLabel" destination="tUa-g5-BEb" id="lH0-bc-INu"/>
+                        <outlet property="valueLabel" destination="1Am-Vy-PTD" id="HlT-2v-elU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
