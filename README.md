@@ -1,4 +1,4 @@
-# iOS-Shared-CoreData-Storage-for-App-Groups
+# iOS Shared CoreData Storage for App Groups
 
 Sometimes iOS applications have some extensions, for example Today Extensions, or Apple Watch Extensions. And sometimes no sense to implement data storage for every target. In this post I tell how to create a one data storage for iOS application and his extensions.
 
@@ -196,19 +196,19 @@ For fetching data please use the following code:
 
 <pre>
 func fetchData() {
-  self.context.performBlockAndWait{ () -> Void in
-    let counter = NSManagedObject.findAllForEntity("Counter", context: self.context)
-    if (counter?.last != nil) {
-      self.counter = (counter?.last as! Counter)
-    }
-    else {
-      self.counter = (NSEntityDescription.insertNewObjectForEntityForName("Counter", inManagedObjectContext: self.context) as! Counter)
-      self.counter?.title = "Counter"
-      self.counter?.value = 0
-    }
-
-    self.updateUI()
-  }
+	self.context.performBlockAndWait{ () -> Void in
+		let counter = NSManagedObject.findAllForEntity("Counter", context: self.context)
+		if (counter?.last != nil) {
+			self.counter = (counter?.last as! Counter)
+		}
+		else {
+			self.counter = (NSEntityDescription.insertNewObjectForEntityForName("Counter", inManagedObjectContext: self.context) as! Counter)
+			self.counter?.title = "Counter"
+			self.counter?.value = 0
+		}
+		
+		self.updateUI()
+	}
 }
 </pre>
 
