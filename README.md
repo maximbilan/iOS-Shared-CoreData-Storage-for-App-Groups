@@ -1,6 +1,6 @@
 # iOS Shared CoreData Storage for App Groups
 
-Sometimes iOS applications have some extensions, for example Today Extensions, or Apple Watch Extensions. And sometimes no sense to implement data storage for every target. In this post I tell how to create a one data storage for iOS application and his extensions.
+Sometimes iOS applications have some extensions, for example <i>Today Extensions</i>, or <i>Apple Watch Extensions</i>. And sometimes no sense to implement data storage for every target. In this post I tell how to create a one data storage for iOS application and his extensions.
 
 First of all you need to create app groups for your application. Go to <a href="https://developer.apple.com/membercenter/">Apple Developer Member Center</a> and register app group. Fill the description and identifier and follow the instructions.
 
