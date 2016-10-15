@@ -22,7 +22,7 @@ Then go to the application or extension and edit services. It’s really simple,
 
 And please, perform this procedure for all extensions of the group. It’s all settings, now open the Xcode and let’s go to write code.
 
-In the Xcode for each target enable App Groups in target settings.
+In the Xcode for each target enable <i>App Groups</i> in target settings.
 
 ![alt tag](https://raw.github.com/maximbilan/iOS-Shared-CoreData-Storage-for-App-Groups/master/screenshots/10.png)
 
