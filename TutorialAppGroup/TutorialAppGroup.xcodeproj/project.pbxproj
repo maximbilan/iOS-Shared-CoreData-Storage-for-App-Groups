@@ -13,7 +13,7 @@
 		947318BC1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 947318BA1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld */; };
 		947318BE1BD3E4A5007189D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947318BD1BD3E4A5007189D7 /* Assets.xcassets */; };
 		947318C11BD3E4A5007189D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947318BF1BD3E4A5007189D7 /* LaunchScreen.storyboard */; };
-		947318CF1BD3E583007189D7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 947318CE1BD3E583007189D7 /* NotificationCenter.framework */; settings = {ASSET_TAGS = (); }; };
+		947318CF1BD3E583007189D7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 947318CE1BD3E583007189D7 /* NotificationCenter.framework */; };
 		947318D21BD3E583007189D7 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947318D11BD3E583007189D7 /* TodayViewController.swift */; };
 		947318D51BD3E583007189D7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947318D31BD3E583007189D7 /* MainInterface.storyboard */; };
 		947318D91BD3E583007189D7 /* TutorialAppGroup Today Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 947318CC1BD3E583007189D7 /* TutorialAppGroup Today Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -23,17 +23,17 @@
 		947318F21BD3E5F2007189D7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947318F01BD3E5F2007189D7 /* Interface.storyboard */; };
 		947318F41BD3E5F2007189D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947318F31BD3E5F2007189D7 /* Assets.xcassets */; };
 		947318F81BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 947318E21BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		947319031BD3F295007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 947318BA1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		947319041BD3F296007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 947318BA1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		947319071BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947319061BD3F2E4007189D7 /* CoreDataStorage.swift */; settings = {ASSET_TAGS = (); }; };
-		947319081BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947319061BD3F2E4007189D7 /* CoreDataStorage.swift */; settings = {ASSET_TAGS = (); }; };
-		947319091BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947319061BD3F2E4007189D7 /* CoreDataStorage.swift */; settings = {ASSET_TAGS = (); }; };
-		9473190C1BD3F513007189D7 /* Counter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473190A1BD3F513007189D7 /* Counter+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		9473190D1BD3F513007189D7 /* Counter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473190A1BD3F513007189D7 /* Counter+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		9473190E1BD3F513007189D7 /* Counter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473190A1BD3F513007189D7 /* Counter+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		9473190F1BD3F513007189D7 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473190B1BD3F513007189D7 /* Counter.swift */; settings = {ASSET_TAGS = (); }; };
-		947319101BD3F513007189D7 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473190B1BD3F513007189D7 /* Counter.swift */; settings = {ASSET_TAGS = (); }; };
-		947319111BD3F513007189D7 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473190B1BD3F513007189D7 /* Counter.swift */; settings = {ASSET_TAGS = (); }; };
+		947319031BD3F295007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 947318BA1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld */; };
+		947319041BD3F296007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 947318BA1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld */; };
+		947319071BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947319061BD3F2E4007189D7 /* CoreDataStorage.swift */; };
+		947319081BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947319061BD3F2E4007189D7 /* CoreDataStorage.swift */; };
+		947319091BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947319061BD3F2E4007189D7 /* CoreDataStorage.swift */; };
+		9473190C1BD3F513007189D7 /* Counter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473190A1BD3F513007189D7 /* Counter+CoreDataProperties.swift */; };
+		9473190D1BD3F513007189D7 /* Counter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473190A1BD3F513007189D7 /* Counter+CoreDataProperties.swift */; };
+		9473190E1BD3F513007189D7 /* Counter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473190A1BD3F513007189D7 /* Counter+CoreDataProperties.swift */; };
+		9473190F1BD3F513007189D7 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473190B1BD3F513007189D7 /* Counter.swift */; };
+		947319101BD3F513007189D7 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473190B1BD3F513007189D7 /* Counter.swift */; };
+		947319111BD3F513007189D7 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473190B1BD3F513007189D7 /* Counter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -307,6 +307,7 @@
 					947318AF1BD3E4A5007189D7 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 828XSMPA74;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -316,6 +317,7 @@
 					947318CB1BD3E583007189D7 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 828XSMPA74;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -325,6 +327,7 @@
 					947318E11BD3E5F2007189D7 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 828XSMPA74;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -592,6 +595,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.TutorialAppGroup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -608,6 +612,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.TutorialAppGroup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -623,6 +628,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -638,6 +644,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -691,6 +698,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -706,6 +714,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
