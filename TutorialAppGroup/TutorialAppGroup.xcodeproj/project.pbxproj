@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D59B0791DB7BAFB000751DB /* TutorialAppGroup WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 947318E21BD3E5F2007189D7 /* TutorialAppGroup WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6D59B07C1DB7BAFB000751DB /* TutorialAppGroup WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 947318EB1BD3E5F2007189D7 /* TutorialAppGroup WatchKit App.app */; };
 		947318B41BD3E4A5007189D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947318B31BD3E4A5007189D7 /* AppDelegate.swift */; };
 		947318B61BD3E4A5007189D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947318B51BD3E4A5007189D7 /* ViewController.swift */; };
 		947318B91BD3E4A5007189D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947318B71BD3E4A5007189D7 /* Main.storyboard */; };
@@ -19,10 +21,8 @@
 		947318D91BD3E583007189D7 /* TutorialAppGroup Today Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 947318CC1BD3E583007189D7 /* TutorialAppGroup Today Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		947318E51BD3E5F2007189D7 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947318E41BD3E5F2007189D7 /* InterfaceController.swift */; };
 		947318E71BD3E5F2007189D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947318E61BD3E5F2007189D7 /* Assets.xcassets */; };
-		947318EC1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App.app in Resources */ = {isa = PBXBuildFile; fileRef = 947318EB1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App.app */; };
 		947318F21BD3E5F2007189D7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947318F01BD3E5F2007189D7 /* Interface.storyboard */; };
 		947318F41BD3E5F2007189D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947318F31BD3E5F2007189D7 /* Assets.xcassets */; };
-		947318F81BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 947318E21BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		947319031BD3F295007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 947318BA1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld */; };
 		947319041BD3F296007189D7 /* TutorialAppGroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 947318BA1BD3E4A5007189D7 /* TutorialAppGroup.xcdatamodeld */; };
 		947319071BD3F2E4007189D7 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947319061BD3F2E4007189D7 /* CoreDataStorage.swift */; };
@@ -37,6 +37,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6D59B0771DB7BAFB000751DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947318A81BD3E4A5007189D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 947318E11BD3E5F2007189D7;
+			remoteInfo = "TutorialAppGroup WatchKit Extension";
+		};
+		6D59B07A1DB7BAFB000751DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947318A81BD3E4A5007189D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 947318EA1BD3E5F2007189D7;
+			remoteInfo = "TutorialAppGroup WatchKit App";
+		};
 		947318D71BD3E583007189D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 947318A81BD3E4A5007189D7 /* Project object */;
@@ -44,30 +58,37 @@
 			remoteGlobalIDString = 947318CB1BD3E583007189D7;
 			remoteInfo = "Tutorial App Group Today Extension";
 		};
-		947318ED1BD3E5F2007189D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 947318A81BD3E4A5007189D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 947318EA1BD3E5F2007189D7;
-			remoteInfo = "TutorialAppGroup WatchKit 1 App";
-		};
-		947318F61BD3E5F2007189D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 947318A81BD3E4A5007189D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 947318E11BD3E5F2007189D7;
-			remoteInfo = "TutorialAppGroup WatchKit 1 Extension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		6D59B07D1DB7BAFB000751DB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6D59B0791DB7BAFB000751DB /* TutorialAppGroup WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D59B07E1DB7BAFB000751DB /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				6D59B07C1DB7BAFB000751DB /* TutorialAppGroup WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		947318DD1BD3E583007189D7 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				947318F81BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension.appex in Embed App Extensions */,
 				947318D91BD3E583007189D7 /* TutorialAppGroup Today Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -89,11 +110,11 @@
 		947318D11BD3E583007189D7 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		947318D41BD3E583007189D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		947318D61BD3E583007189D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		947318E21BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TutorialAppGroup WatchKit 1 Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		947318E21BD3E5F2007189D7 /* TutorialAppGroup WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TutorialAppGroup WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		947318E41BD3E5F2007189D7 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		947318E61BD3E5F2007189D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		947318E81BD3E5F2007189D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		947318EB1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TutorialAppGroup WatchKit 1 App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		947318EB1BD3E5F2007189D7 /* TutorialAppGroup WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TutorialAppGroup WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		947318F11BD3E5F2007189D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		947318F31BD3E5F2007189D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		947318F51BD3E5F2007189D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,8 +171,8 @@
 			children = (
 				947318B01BD3E4A5007189D7 /* TutorialAppGroup.app */,
 				947318CC1BD3E583007189D7 /* TutorialAppGroup Today Extension.appex */,
-				947318E21BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension.appex */,
-				947318EB1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App.app */,
+				947318E21BD3E5F2007189D7 /* TutorialAppGroup WatchKit Extension.appex */,
+				947318EB1BD3E5F2007189D7 /* TutorialAppGroup WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,12 +254,13 @@
 				947318AD1BD3E4A5007189D7 /* Frameworks */,
 				947318AE1BD3E4A5007189D7 /* Resources */,
 				947318DD1BD3E583007189D7 /* Embed App Extensions */,
+				6D59B07E1DB7BAFB000751DB /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				947318D81BD3E583007189D7 /* PBXTargetDependency */,
-				947318F71BD3E5F2007189D7 /* PBXTargetDependency */,
+				6D59B07B1DB7BAFB000751DB /* PBXTargetDependency */,
 			);
 			name = TutorialAppGroup;
 			productName = TutorialAppGroup;
@@ -262,9 +284,9 @@
 			productReference = 947318CC1BD3E583007189D7 /* TutorialAppGroup Today Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		947318E11BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension */ = {
+		947318E11BD3E5F2007189D7 /* TutorialAppGroup WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 947318FC1BD3E5F2007189D7 /* Build configuration list for PBXNativeTarget "TutorialAppGroup WatchKit 1 Extension" */;
+			buildConfigurationList = 947318FC1BD3E5F2007189D7 /* Build configuration list for PBXNativeTarget "TutorialAppGroup WatchKit Extension" */;
 			buildPhases = (
 				947318DE1BD3E5F2007189D7 /* Sources */,
 				947318DF1BD3E5F2007189D7 /* Frameworks */,
@@ -273,27 +295,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				947318EE1BD3E5F2007189D7 /* PBXTargetDependency */,
 			);
-			name = "TutorialAppGroup WatchKit 1 Extension";
+			name = "TutorialAppGroup WatchKit Extension";
 			productName = "TutorialAppGroup WatchKit 1 Extension";
-			productReference = 947318E21BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
+			productReference = 947318E21BD3E5F2007189D7 /* TutorialAppGroup WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
-		947318EA1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App */ = {
+		947318EA1BD3E5F2007189D7 /* TutorialAppGroup WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 947318F91BD3E5F2007189D7 /* Build configuration list for PBXNativeTarget "TutorialAppGroup WatchKit 1 App" */;
+			buildConfigurationList = 947318F91BD3E5F2007189D7 /* Build configuration list for PBXNativeTarget "TutorialAppGroup WatchKit App" */;
 			buildPhases = (
 				947318E91BD3E5F2007189D7 /* Resources */,
+				6D59B07D1DB7BAFB000751DB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6D59B0781DB7BAFB000751DB /* PBXTargetDependency */,
 			);
-			name = "TutorialAppGroup WatchKit 1 App";
+			name = "TutorialAppGroup WatchKit App";
 			productName = "TutorialAppGroup WatchKit 1 App";
-			productReference = 947318EB1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App.app */;
-			productType = "com.apple.product-type.application.watchapp";
+			productReference = 947318EB1BD3E5F2007189D7 /* TutorialAppGroup WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
 		};
 /* End PBXNativeTarget section */
 
@@ -301,7 +324,7 @@
 		947318A81BD3E4A5007189D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Maxim;
 				TargetAttributes = {
 					947318AF1BD3E4A5007189D7 = {
@@ -360,8 +383,8 @@
 			targets = (
 				947318AF1BD3E4A5007189D7 /* TutorialAppGroup */,
 				947318CB1BD3E583007189D7 /* TutorialAppGroup Today Extension */,
-				947318E11BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension */,
-				947318EA1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App */,
+				947318E11BD3E5F2007189D7 /* TutorialAppGroup WatchKit Extension */,
+				947318EA1BD3E5F2007189D7 /* TutorialAppGroup WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -390,7 +413,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				947318E71BD3E5F2007189D7 /* Assets.xcassets in Resources */,
-				947318EC1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,20 +468,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6D59B0781DB7BAFB000751DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 947318E11BD3E5F2007189D7 /* TutorialAppGroup WatchKit Extension */;
+			targetProxy = 6D59B0771DB7BAFB000751DB /* PBXContainerItemProxy */;
+		};
+		6D59B07B1DB7BAFB000751DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 947318EA1BD3E5F2007189D7 /* TutorialAppGroup WatchKit App */;
+			targetProxy = 6D59B07A1DB7BAFB000751DB /* PBXContainerItemProxy */;
+		};
 		947318D81BD3E583007189D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 947318CB1BD3E583007189D7 /* TutorialAppGroup Today Extension */;
 			targetProxy = 947318D71BD3E583007189D7 /* PBXContainerItemProxy */;
-		};
-		947318EE1BD3E5F2007189D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 947318EA1BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 App */;
-			targetProxy = 947318ED1BD3E5F2007189D7 /* PBXContainerItemProxy */;
-		};
-		947318F71BD3E5F2007189D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 947318E11BD3E5F2007189D7 /* TutorialAppGroup WatchKit 1 Extension */;
-			targetProxy = 947318F61BD3E5F2007189D7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -512,8 +534,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -557,8 +581,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -577,6 +603,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -585,11 +612,11 @@
 		947318C61BD3E4A5007189D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TutorialAppGroup/TutorialAppGroup.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Maxim Bilan (HXGL6HW737)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Maxim Bilan (HXGL6HW737)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TutorialAppGroup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.TutorialAppGroup;
@@ -602,11 +629,11 @@
 		947318C71BD3E4A5007189D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TutorialAppGroup/TutorialAppGroup.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Maxim Bilan (HXGL6HW737)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Maxim Bilan (HXGL6HW737)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TutorialAppGroup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.TutorialAppGroup;
@@ -651,38 +678,40 @@
 		947318FA1BD3E5F2007189D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "TutorialAppGroup WatchKit 1 App/TutorialAppGroup WatchKit 1 App.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Maxim Bilan (HXGL6HW737)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Maxim Bilan (HXGL6HW737)";
 				IBSC_MODULE = TutorialAppGroup_WatchKit_1_Extension;
 				INFOPLIST_FILE = "TutorialAppGroup WatchKit 1 App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
 		947318FB1BD3E5F2007189D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "TutorialAppGroup WatchKit 1 App/TutorialAppGroup WatchKit 1 App.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Maxim Bilan (HXGL6HW737)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Maxim Bilan (HXGL6HW737)";
 				IBSC_MODULE = TutorialAppGroup_WatchKit_1_Extension;
 				INFOPLIST_FILE = "TutorialAppGroup WatchKit 1 App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -694,11 +723,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Maxim Bilan (HXGL6HW737)";
 				INFOPLIST_FILE = "TutorialAppGroup WatchKit 1 Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -710,11 +742,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Maxim Bilan (HXGL6HW737)";
 				INFOPLIST_FILE = "TutorialAppGroup WatchKit 1 Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.tutorialappgroup.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -748,7 +783,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		947318F91BD3E5F2007189D7 /* Build configuration list for PBXNativeTarget "TutorialAppGroup WatchKit 1 App" */ = {
+		947318F91BD3E5F2007189D7 /* Build configuration list for PBXNativeTarget "TutorialAppGroup WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				947318FA1BD3E5F2007189D7 /* Debug */,
@@ -757,7 +792,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		947318FC1BD3E5F2007189D7 /* Build configuration list for PBXNativeTarget "TutorialAppGroup WatchKit 1 Extension" */ = {
+		947318FC1BD3E5F2007189D7 /* Build configuration list for PBXNativeTarget "TutorialAppGroup WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				947318FD1BD3E5F2007189D7 /* Debug */,
