@@ -35,21 +35,21 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's an update, use NCUpdateResult.NewData
 
 		fetchData()
-        completionHandler(NCUpdateResult.NewData)
+        completionHandler(NCUpdateResult.newData)
     }
 	
 	// MARK: - Logic
 	
 	func fetchData() {
-		self.context.performBlockAndWait{ () -> Void in
+		self.context.performAndWait{ () -> Void in
 			
-			let counter = NSManagedObject.findAllForEntity("Counter", context: self.context)
+			let counter = NSManagedObject.findAllForEntity(entityName: "Counter", context: self.context)
 			
 			if (counter?.last != nil) {
 				self.counter = (counter?.last as! Counter)
 			}
 			else {
-				self.counter = (NSEntityDescription.insertNewObjectForEntityForName("Counter", inManagedObjectContext: self.context) as! Counter)
+				self.counter = (NSEntityDescription.insertNewObject(forEntityName: "Counter", into: self.context) as! Counter)
 				self.counter?.title = "Counter"
 				self.counter?.value = 0
 			}
@@ -65,8 +65,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	
 	func save() {
 		if let value = Int(self.valueLabel.text!) {
-			self.counter?.value = value
-			CoreDataStorage.saveContext(self.context)
+			self.counter?.value = value as NSNumber?
+			CoreDataStorage.saveContext(context: self.context)
 		}
 	}
 	
