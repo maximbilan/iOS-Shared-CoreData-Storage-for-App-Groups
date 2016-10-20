@@ -58,7 +58,7 @@ class ViewController: UIViewController {
 	
 	// MARK: - Actions
 	
-	@IBAction func incrementButtonAction(sender: UIButton) {
+	@IBAction func incrementButtonAction(_ sender: UIButton) {
 		if let value = Int(self.valueLabel.text!) {
 			counter?.value = (value + 1) as NSNumber?
 		}
