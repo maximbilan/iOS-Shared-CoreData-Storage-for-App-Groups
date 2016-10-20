@@ -40,7 +40,7 @@ class InterfaceController: WKInterfaceController {
 	func fetchData() {
 		self.context.performAndWait{ () -> Void in
 			
-			let counter = NSManagedObject.findAllForEntity(entityName: "Counter", context: self.context)
+			let counter = NSManagedObject.findAllForEntity("Counter", context: self.context)
 			
 			if (counter?.last != nil) {
 				self.counter = (counter?.last as! Counter)
@@ -61,7 +61,7 @@ class InterfaceController: WKInterfaceController {
 	}
 	
 	func save() {
-		CoreDataStorage.saveContext(context: self.context)
+		CoreDataStorage.saveContext(self.context)
 	}
 	
 	// MARK: - Actions
