@@ -19,11 +19,11 @@ class InterfaceController: WKInterfaceController {
 	let context = CoreDataStorage.mainQueueContext()
 	var counter: Counter?
 	
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+	override func awake(withContext context: Any?) {
+		super.awake(withContext: context)
 		
 		fetchData()
-    }
+	}
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -38,15 +38,15 @@ class InterfaceController: WKInterfaceController {
 	// MARK: - Logic
 	
 	func fetchData() {
-		self.context.performBlockAndWait{ () -> Void in
+		self.context.performAndWait{ () -> Void in
 			
-			let counter = NSManagedObject.findAllForEntity("Counter", context: self.context)
+			let counter = NSManagedObject.findAllForEntity(entityName: "Counter", context: self.context)
 			
 			if (counter?.last != nil) {
 				self.counter = (counter?.last as! Counter)
 			}
 			else {
-				self.counter = (NSEntityDescription.insertNewObjectForEntityForName("Counter", inManagedObjectContext: self.context) as! Counter)
+				self.counter = (NSEntityDescription.insertNewObject(forEntityName: "Counter", into: self.context) as! Counter)
 				self.counter?.title = "Counter"
 				self.counter?.value = 0
 			}
@@ -61,14 +61,14 @@ class InterfaceController: WKInterfaceController {
 	}
 	
 	func save() {
-		CoreDataStorage.saveContext(self.context)
+		CoreDataStorage.saveContext(context: self.context)
 	}
 	
 	// MARK: - Actions
 	
 	@IBAction func incrementButtonAction() {
-		let value = counter?.value?.integerValue
-		counter?.value = value! + 1
+		let value = counter?.value?.intValue
+		counter?.value = (value! + 1) as NSNumber?
 		
 		updateUI()
 		save()

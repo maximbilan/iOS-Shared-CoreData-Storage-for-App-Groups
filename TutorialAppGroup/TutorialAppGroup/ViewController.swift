@@ -19,21 +19,21 @@ class ViewController: UIViewController {
 	let context = CoreDataStorage.mainQueueContext()
 	
 	deinit {
-		NSNotificationCenter.defaultCenter().removeObserver(self)
+		NotificationCenter.default.removeObserver(self)
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.context.performBlockAndWait{ () -> Void in
+		self.context.performAndWait{ () -> Void in
 			
-			let counter = NSManagedObject.findAllForEntity("Counter", context: self.context)
+			let counter = NSManagedObject.findAllForEntity(entityName: "Counter", context: self.context)
 			
 			if (counter?.last != nil) {
 				self.counter = (counter?.last as! Counter)
 			}
 			else {
-				self.counter = (NSEntityDescription.insertNewObjectForEntityForName("Counter", inManagedObjectContext: self.context) as! Counter)
+				self.counter = (NSEntityDescription.insertNewObject(forEntityName: "Counter", into: self.context) as! Counter)
 				self.counter?.title = "Counter"
 				self.counter?.value = 0
 			}
@@ -51,8 +51,8 @@ class ViewController: UIViewController {
 	
 	func save() {
 		if let value = Int(self.valueLabel.text!) {
-			self.counter?.value = value
-			CoreDataStorage.saveContext(self.context)
+			self.counter?.value = value as NSNumber?
+			CoreDataStorage.saveContext(context: self.context)
 		}
 	}
 	
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
 	
 	@IBAction func incrementButtonAction(sender: UIButton) {
 		if let value = Int(self.valueLabel.text!) {
-			counter?.value = value + 1
+			counter?.value = (value + 1) as NSNumber?
 		}
 		
 		updateUI()
@@ -68,4 +68,3 @@ class ViewController: UIViewController {
 	}
 
 }
-

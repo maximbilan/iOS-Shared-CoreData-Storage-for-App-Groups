@@ -6,58 +6,48 @@
 //  Copyright © 2015 Maxim. All rights reserved.
 //
 
-import Foundation
 import CoreData
 
-public class CoreDataStorage {
+open class CoreDataStorage {
 	
 	// MARK: - Shared Instance
 	
-	class var sharedInstance : CoreDataStorage {
-		struct Static {
-			static var onceToken: dispatch_once_t = 0
-			static var instance: CoreDataStorage? = nil
-		}
-		dispatch_once(&Static.onceToken) {
-			Static.instance = CoreDataStorage()
-		}
-		return Static.instance!
-	}
+	public static let sharedInstance = CoreDataStorage()
 	
 	// MARK: - Initialization
 	
 	init() {
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "contextDidSavePrivateQueueContext:", name: NSManagedObjectContextDidSaveNotification, object: self.privateQueueCtxt)
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "contextDidSaveMainQueueContext:", name: NSManagedObjectContextDidSaveNotification, object: self.mainQueueCtxt)
+		NotificationCenter.default.addObserver(self, selector: #selector(contextDidSavePrivateQueueContext(_:)), name: NSNotification.Name.NSManagedObjectContextDidSave, object: self.privateQueueCtxt)
+		NotificationCenter.default.addObserver(self, selector: #selector(contextDidSaveMainQueueContext(_:)), name: NSNotification.Name.NSManagedObjectContextDidSave, object: self.mainQueueCtxt)
 	}
 	
 	deinit {
-		NSNotificationCenter.defaultCenter().removeObserver(self)
+		NotificationCenter.default.removeObserver(self)
 	}
 	
 	// MARK: - Notifications
 	
-	@objc func contextDidSavePrivateQueueContext(notification: NSNotification) {
+	@objc func contextDidSavePrivateQueueContext(_ notification: Notification) {
 		if let context = self.mainQueueCtxt {
 			self.synced(self, closure: { () -> () in
-				context.performBlock({() -> Void in
-					context.mergeChangesFromContextDidSaveNotification(notification)
+				context.perform({() -> Void in
+					context.mergeChanges(fromContextDidSave: notification)
 				})
 			})
 		}
 	}
 	
-	@objc func contextDidSaveMainQueueContext(notification: NSNotification) {
+	@objc func contextDidSaveMainQueueContext(_ notification: Notification) {
 		if let context = self.privateQueueCtxt {
 			self.synced(self, closure: { () -> () in
-				context.performBlock({() -> Void in
-					context.mergeChangesFromContextDidSaveNotification(notification)
+				context.perform({() -> Void in
+					context.mergeChanges(fromContextDidSave: notification)
 				})
 			})
 		}
 	}
 	
-	func synced(lock: AnyObject, closure: () -> ()) {
+	func synced(_ lock: AnyObject, closure: () -> ()) {
 		objc_sync_enter(lock)
 		closure()
 		objc_sync_exit(lock)
@@ -65,29 +55,29 @@ public class CoreDataStorage {
 	
 	// MARK: - Core Data stack
 	
-	lazy var applicationDocumentsDirectory: NSURL = {
+	lazy var applicationDocumentsDirectory: URL = {
 		// The directory the application uses to store the Core Data store file. This code uses a directory named 'Bundle identifier' in the application's documents Application Support directory.
-		let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+		let urls = Foundation.FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
 		return urls[urls.count-1]
-		}()
+	}()
 	
 	lazy var managedObjectModel: NSManagedObjectModel = {
 		// The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-		let modelURL = NSBundle.mainBundle().URLForResource("TutorialAppGroup", withExtension: "momd")!
-		return NSManagedObjectModel(contentsOfURL: modelURL)!
-		}()
+		let modelURL = Bundle.main.url(forResource: "TutorialAppGroup", withExtension: "momd")!
+		return NSManagedObjectModel(contentsOf: modelURL)!
+	}()
 	
 	lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
 		// The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
 		// Create the coordinator and store
 		var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-		
-		let directory = NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier("group.com.maximbilan.tutorialappgroup")!
-		
-		let url = directory.URLByAppendingPathComponent("TutorialAppGroup.sqlite")
-		
+		let options = [
+			NSMigratePersistentStoresAutomaticallyOption: true,
+			NSInferMappingModelAutomaticallyOption: true
+		]
+		let url = self.applicationDocumentsDirectory.appendingPathComponent("TutorialAppGroup.sqlite")
 		do {
-			try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+			try coordinator!.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: options)
 		} catch var error as NSError {
 			coordinator = nil
 			NSLog("Unresolved error \(error), \(error.userInfo)")
@@ -95,37 +85,36 @@ public class CoreDataStorage {
 		} catch {
 			fatalError()
 		}
-		print("\(coordinator?.persistentStores)")
 		return coordinator
-		}()
+	}()
 	
 	// MARK: - NSManagedObject Contexts
 	
-	public class func mainQueueContext() -> NSManagedObjectContext {
+	open class func mainQueueContext() -> NSManagedObjectContext {
 		return self.sharedInstance.mainQueueCtxt!
 	}
 	
-	public class func privateQueueContext() -> NSManagedObjectContext {
+	open class func privateQueueContext() -> NSManagedObjectContext {
 		return self.sharedInstance.privateQueueCtxt!
 	}
 	
 	lazy var mainQueueCtxt: NSManagedObjectContext? = {
 		// Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
-		var managedObjectContext = NSManagedObjectContext(concurrencyType:.MainQueueConcurrencyType)
+		var managedObjectContext = NSManagedObjectContext(concurrencyType:.mainQueueConcurrencyType)
 		managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator
 		return managedObjectContext
-		}()
+	}()
 	
 	lazy var privateQueueCtxt: NSManagedObjectContext? = {
 		// Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
-		var managedObjectContext = NSManagedObjectContext(concurrencyType:.PrivateQueueConcurrencyType)
+		var managedObjectContext = NSManagedObjectContext(concurrencyType:.privateQueueConcurrencyType)
 		managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator
 		return managedObjectContext
-		}()
+	}()
 	
 	// MARK: - Core Data Saving support
 	
-	public class func saveContext(context: NSManagedObjectContext?) {
+	open class func saveContext(_ context: NSManagedObjectContext?) {
 		if let moc = context {
 			if moc.hasChanges {
 				do {
@@ -137,18 +126,18 @@ public class CoreDataStorage {
 	}
 	
 }
-
 extension NSManagedObject {
 	
-	public class func findAllForEntity(entityName: String, context: NSManagedObjectContext) -> [AnyObject]? {
-		let request = NSFetchRequest(entityName: entityName)
+	public class func findAllForEntity(_ entityName: String, context: NSManagedObjectContext) -> [AnyObject]? {
+		let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
 		let result: [AnyObject]?
 		do {
-			result = try context.executeFetchRequest(request)
+			result = try context.fetch(request)
 		} catch let error as NSError {
 			print(error)
 			result = nil
 		}
 		return result
 	}
+	
 }

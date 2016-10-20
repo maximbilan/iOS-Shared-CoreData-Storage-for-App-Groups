@@ -74,7 +74,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	
 	@IBAction func incrementButtonAction(sender: UIButton) {
 		if let value = Int(self.valueLabel.text!) {
-			counter?.value = value + 1
+			counter?.value = (value + 1) as NSNumber?
 		}
 		
 		updateUI()
