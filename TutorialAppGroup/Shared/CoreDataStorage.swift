@@ -75,7 +75,8 @@ open class CoreDataStorage {
 			NSMigratePersistentStoresAutomaticallyOption: true,
 			NSInferMappingModelAutomaticallyOption: true
 		]
-		let url = self.applicationDocumentsDirectory.appendingPathComponent("TutorialAppGroup.sqlite")
+		let directory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.maximbilan.tutorialappgroup")!
+		let url = directory.appendingPathComponent("TutorialAppGroup.sqlite")
 		do {
 			try coordinator!.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: options)
 		} catch var error as NSError {
