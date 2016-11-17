@@ -219,3 +219,5 @@ CoreDataStorage.saveContext(self.context)
 </pre>
 
 The full code you can found in this repository. Please feel free. Happy coding!
+
+<b>NOTE:</b> In watchOS 2 and higher you should have to maintain two separate data stores. Group identifier is not working in this case. If either side is a "read-only" client and the CoreData datastore is small and changes infrequently you could potentially use the transferFile WatchConnectivity API to transfer the whole store each time it changes.
