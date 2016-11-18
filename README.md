@@ -179,7 +179,7 @@ extension NSManagedObject {
 
 CoreData class for working with your shared storage, also <i>NSManagedObject</i> extension for fetching data from entity.
 
-I provide samples for iOS application, Today Extension and WatchKit app. See the screenshots:
+I provide samples for iOS application, <i>Today Extension</i> and <i>WatchKit</i> app. See the screenshots:
 
 ![alt tag](https://raw.github.com/maximbilan/iOS-Shared-CoreData-Storage-for-App-Groups/master/screenshots/11.png)
 ![alt tag](https://raw.github.com/maximbilan/iOS-Shared-CoreData-Storage-for-App-Groups/master/screenshots/12.png)
