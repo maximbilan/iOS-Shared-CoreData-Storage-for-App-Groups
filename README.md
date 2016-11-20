@@ -26,7 +26,7 @@ In the Xcode for each target enable <i>App Groups</i> in target settings.
 
 ![alt tag](https://raw.github.com/maximbilan/iOS-Shared-CoreData-Storage-for-App-Groups/master/screenshots/10.png)
 
-Use Core Data Storage class. Implementation of this class see below:
+Use <i>Core Data Storage</i> class. Implementation of this class see below:
 
 <pre>
 import Foundation
