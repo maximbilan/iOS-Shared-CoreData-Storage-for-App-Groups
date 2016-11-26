@@ -177,7 +177,7 @@ extension NSManagedObject {
 }
 </pre>
 
-CoreData class for working with your shared storage, also <i>NSManagedObject</i> extension for fetching data from entity.
+<i>CoreData</i> class for working with your shared storage, also <i>NSManagedObject</i> extension for fetching data from entity.
 
 I provide samples for iOS application, <i>Today Extension</i> and <i>WatchKit</i> app. See the screenshots:
 
@@ -220,4 +220,4 @@ CoreDataStorage.saveContext(self.context)
 
 The full code you can found in this repository. Please feel free. Happy coding!
 
-<b>NOTE:</b> In watchOS 2 and higher you should have to maintain two separate data stores. Group identifier is not working in this case. If either side is a "read-only" client and the CoreData datastore is small and changes infrequently you could potentially use the transferFile WatchConnectivity API to transfer the whole store each time it changes.
+<b>NOTE:</b> In watchOS 2 and higher you should have to maintain two separate data stores. Group identifier is not working in this case. If either side is a "read-only" client and the <i>CoreData</i> datastore is small and changes infrequently you could potentially use the transferFile WatchConnectivity API to transfer the whole store each time it changes.
