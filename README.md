@@ -1,6 +1,6 @@
 # iOS Shared CoreData Storage for App Groups
 
-Sometimes <i>iOS</i> applications have some extensions, for example <i>Today Extensions</i>, or <i>Apple Watch Extensions</i>. And sometimes no sense to implement data storage for every target. In this post I tell how to create a one data storage for iOS application and his extensions.
+Sometimes <i>iOS</i> applications have some extensions, for example <i>Today Extensions</i>, or <i>Apple Watch Extensions</i>. And sometimes no sense to implement a data storage for the every target. In this post I tell how to create one data storage for iOS application and his extensions.
 
 First of all you need to create app groups for your application. Go to <a href="https://developer.apple.com/membercenter/">Apple Developer Member Center</a> and register app group. Fill the description and identifier and follow the instructions.
 
@@ -8,11 +8,11 @@ First of all you need to create app groups for your application. Go to <a href="
 ![alt tag](https://raw.github.com/maximbilan/iOS-Shared-CoreData-Storage-for-App-Groups/master/screenshots/2.png)
 ![alt tag](https://raw.github.com/maximbilan/iOS-Shared-CoreData-Storage-for-App-Groups/master/screenshots/3.png)
 
-After that when you will create identifier for application or extension, don’t forget enable service <i>App Groups</i>.
+After that when you will create an identifier for an application or an extension, don’t forget enable the service <i>App Groups</i>.
 
 ![alt tag](https://raw.github.com/maximbilan/iOS-Shared-CoreData-Storage-for-App-Groups/master/screenshots/4.png)
 
-Then go to the application or extension and edit services. It’s really simple, see the next screenshots:
+Then go to the application or the extension and edit services. It’s really simple, see the next screenshots:
 
 ![alt tag](https://raw.github.com/maximbilan/iOS-Shared-CoreData-Storage-for-App-Groups/master/screenshots/5.png)
 ![alt tag](https://raw.github.com/maximbilan/iOS-Shared-CoreData-Storage-for-App-Groups/master/screenshots/6.png)
@@ -22,7 +22,7 @@ Then go to the application or extension and edit services. It’s really simple,
 
 And please, perform this procedure for all extensions of the group. It’s all settings, now open the Xcode and let’s go to write code.
 
-In the Xcode for each target enable <i>App Groups</i> in target settings.
+In the Xcode for the each target enable <i>App Groups</i> in target settings.
 
 ![alt tag](https://raw.github.com/maximbilan/iOS-Shared-CoreData-Storage-for-App-Groups/master/screenshots/10.png)
 
@@ -177,7 +177,7 @@ extension NSManagedObject {
 }
 </pre>
 
-<i>CoreData</i> class for working with your shared storage, also <i>NSManagedObject</i> extension for fetching data from entity.
+<i>CoreData</i> class for working with your shared storage, also <i>NSManagedObject</i> extension for fetching data from the entity.
 
 I provide samples for iOS application, <i>Today Extension</i> and <i>WatchKit</i> app. See the screenshots:
 
@@ -185,7 +185,7 @@ I provide samples for iOS application, <i>Today Extension</i> and <i>WatchKit</i
 ![alt tag](https://raw.github.com/maximbilan/iOS-Shared-CoreData-Storage-for-App-Groups/master/screenshots/12.png)
 ![alt tag](https://raw.github.com/maximbilan/iOS-Shared-CoreData-Storage-for-App-Groups/master/screenshots/13.png)
 
-You need to create context and CoreData object:
+You need to create a context and CoreData object:
 
 <pre>
 let context = CoreDataStorage.mainQueueContext()
@@ -212,7 +212,7 @@ func fetchData() {
 }
 </pre>
 
-For saving context:
+For saving a context:
 
 <pre>
 CoreDataStorage.saveContext(self.context)
